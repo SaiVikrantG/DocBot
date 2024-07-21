@@ -12,6 +12,25 @@
   "activationEvents": [],
   "main": "./src/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "docBotViewContainer",
+          "title": "Doc Bot",
+          "icon": "media/hubot.svg"
+        }
+      ]
+    },
+    "views": {
+      "docBotViewContainer": [
+        {
+          "id": "docBotView",
+          "name": "Web Link Input",
+          "type": "webview",
+          "icon": "media/hubot.svg"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "vscode-doc-bot-extension.askQuestion",
@@ -24,6 +43,10 @@
       {
         "command": "vscode-doc-bot-extension.callBot",
         "title": "Call Bot"
+      },
+      {
+        "command":"vscode-doc-bot-extension.storeWebLink",
+        "title":"Store Web Link"
       }
     ],
     "menus":{
